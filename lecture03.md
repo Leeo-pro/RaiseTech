@@ -2,4 +2,4 @@
 
 ## デプロイ
 - バージョン確認
-![エビデンス](../images/version.png)
+![エビデンス](images/version.png)
