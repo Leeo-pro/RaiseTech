@@ -14,8 +14,8 @@
 - データベース概要
 ![エビデンス](images/RDS.png)
 - セキュリティグループ
-![エビデンス](images/RDS_SecurityGroup_Inbound)
-![エビデンス](images/RDS_SecurityGroup_Outbound)
+![エビデンス](images/RDS_SecurityGroup_Inbound.png)
+![エビデンス](images/RDS_SecurityGroup_Outbound.png)
 
 ## MySQL
 - アクセス証跡
