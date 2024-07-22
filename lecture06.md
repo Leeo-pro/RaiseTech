@@ -6,7 +6,7 @@
 - イベント名 ConsoleLogin
 - イベントソース signin.amazonaws.com
 ![エビデンス](images/lecture06/CloudTrail.png)
-![エビデンス](images/lecture06/CloudTrail-eventrecord.png)
+![エビデンス](images/lecture06/CloudTrails-eventrecord.png)
 
 ## アラート
 - アプリ起動の状態
