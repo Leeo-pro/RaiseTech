@@ -24,4 +24,4 @@
 - 現在の利用料（内訳）
 ![エビデンス](images/lecture06/billing_detail.png)
 - AWS Pricing Calculatorを使用した見積もり
-![エビデンス](https://calculator.aws/#/estimate?id=b73fa9660f7d837210d9ea2de3597daeb4f41d23)
+https://calculator.aws/#/estimate?id=b73fa9660f7d837210d9ea2de3597daeb4f41d23
