@@ -25,3 +25,7 @@
 ![エビデンス](images/lecture06/billing_detail.png)
 - AWS Pricing Calculatorを使用した見積もり
 https://calculator.aws/#/estimate?id=b73fa9660f7d837210d9ea2de3597daeb4f41d23
+
+## マネジメントコンソールから、現在の利用料を確認
+- 無料枠内の使用を超えていたため料金が発生している。
+- EC2はわずかながら超過していた。
