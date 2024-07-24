@@ -24,8 +24,8 @@
 - 現在の利用料（内訳）
 ![エビデンス](images/lecture06/billing_detail.png)
 - AWS Pricing Calculatorを使用した見積もり
-https://calculator.aws/#/estimate?id=73bd6aec97377d62dcfe7feef0b8874fac955d6e
+https://calculator.aws/#/estimate?id=405e817d9ad530a067509291d2a3927f4be592ce
 
 ## マネジメントコンソールから、現在の利用料を確認
 - 無料枠内の使用を超えていたため料金が発生している。
-- EC2はわずかながら超過していた。
+- EC2はわずかながら超過していた。超過要因はインスタンスを合計4つ使用していたため
