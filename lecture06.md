@@ -24,7 +24,7 @@
 - 現在の利用料（内訳）
 ![エビデンス](images/lecture06/billing_detail.png)
 - AWS Pricing Calculatorを使用した見積もり
-https://calculator.aws/#/estimate?id=405e817d9ad530a067509291d2a3927f4be592ce
+https://calculator.aws/#/estimate?id=7c74b4ed78ae86fb5a84e4c29ac7025a36d3c8f1
 
 ## マネジメントコンソールから、現在の利用料を確認
 - 無料枠内の使用を超えていたため料金が発生している。
