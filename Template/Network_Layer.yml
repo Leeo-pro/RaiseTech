@@ -23,6 +23,7 @@ Resources:
       Tags:
       - Key: Name
         Value: PublicSubnet1a
+
   PrivateSubnet1a:
     Type: AWS::EC2::Subnet
     Properties:
@@ -32,6 +33,7 @@ Resources:
       Tags:
       - Key: Name
         Value: PrivateSubnet1a
+
   PublicSubnet1c:
     Type: AWS::EC2::Subnet
     Properties:
@@ -42,6 +44,7 @@ Resources:
       Tags:
       - Key: Name
         Value: PublicSubnet1c
+
   PrivateSubnet1c:
     Type: AWS::EC2::Subnet
     Properties:
@@ -73,6 +76,7 @@ Resources:
       Tags:
         - Key: Name
           Value: PublicRouteTable
+
   PrivateRouteTable:
     Type: AWS::EC2::RouteTable
     Properties:
@@ -87,16 +91,19 @@ Resources:
     Properties:
       RouteTableId: !Ref PublicRouteTable
       SubnetId: !Ref PublicSubnet1a
+
   PublicRouteTableAssociation1c:
     Type: AWS::EC2::SubnetRouteTableAssociation
     Properties:
       RouteTableId: !Ref PublicRouteTable
       SubnetId: !Ref PublicSubnet1c
+
   PrivateRouteTableAssociation1a:
     Type: AWS::EC2::SubnetRouteTableAssociation
     Properties:
       RouteTableId: !Ref PrivateRouteTable
       SubnetId: !Ref PrivateSubnet1a
+
   PrivateRouteTableAssociation1c:
     Type: AWS::EC2::SubnetRouteTableAssociation
     Properties:
@@ -125,18 +132,22 @@ Outputs:
     Value: !Ref SampleVPC
     Export:
       Name: NetworkLayer-SampleVPC
+
   PublicSubnet1a:
     Value: !Ref PublicSubnet1a
     Export:
       Name: NetworkLayer-PublicSubnet1a
+
   PublicSubnet1c:
     Value: !Ref PublicSubnet1c
     Export:
       Name: NetworkLayer-PublicSubnet1c
+
   PrivateSubnet1a:
     Value: !Ref PrivateSubnet1a
     Export:
       Name: NetworkLayer-PrivateSubnet1a
+
   PrivateSubnet1c:
     Value: !Ref PrivateSubnet1c
     Export:

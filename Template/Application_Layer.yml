@@ -9,9 +9,11 @@ Parameters:
       - t2.micro
       - m1.small
       - m1.large
+
   DBInstanceIdentifier:
     Type: String
-    Default: my-db-instance-test
+    Default: my-db-instance
+
   DBInstanceType:
     Type: String
     Default: db.t3.micro
@@ -19,16 +21,16 @@ Parameters:
       - db.t3.micro
       - db.t2.small
       - db.t2.medium
+
   DBSubnetGroupDescription:
     Type: String
     Default: RDS subnet group
-  S3BucketName:
-    Type: String
-    Default: my-s3-bucket
+
   KeyPairName:
     Description: Name of an existing EC2 KeyPair to enable SSH access
     Type: String
     Default: key202408
+
   DBPassword:
     NoEcho: true
     Type: String
@@ -174,7 +176,7 @@ Resources:
   SampleS3Bucket:
     Type: AWS::S3::Bucket
     Properties:
-      BucketName: !Sub "${S3BucketName}-${AWS::StackName}-${AWS::Region}-${AWS::AccountId}"
+      BucketName: sample-s3-202408
       AccessControl: Private
       BucketEncryption:
         ServerSideEncryptionConfiguration:

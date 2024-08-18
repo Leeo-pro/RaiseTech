@@ -1,9 +1,9 @@
 # 第10回課題
 
 ## 作成したテンプレートファイル
-- [アプリケーション関連](Template/Application_Layer.YML)
-- [セキュリティ関連](Template/Security_Layer.YML)
-- [ネットワーク関連](Template/Network_Layer.YML)
+- [アプリケーション関連](Template/Application_Layer.yml)
+- [セキュリティ関連](Template/Security_Layer.yml)
+- [ネットワーク関連](Template/Network_Layer.yml)
 
 ## VPC
 - VPC
@@ -35,8 +35,10 @@
 
 ## 接続確認
 - EC2
+
 ![エビデンス](images/lecture10/access_EC2.png)
 - RDS
+
 ![エビデンス](images/lecture10/access_RDS.png)
 
 ## 感想
