@@ -55,14 +55,14 @@ Outputs:
   SecurityGroupEC2:
     Value: !Ref SecurityGroupEC2
     Export:
-      Name: SecurityLayer-SecurityGroupEC2
+      Name: SecurityGroupEC2Id-SecurityLayer
 
   SecurityGroupRDS:
     Value: !Ref SecurityGroupRDS
     Export:
-      Name: SecurityLayer-SecurityGroupRDS
+      Name: SecurityGroupRDSId-SecurityLayer
 
   SecurityGroupALB:
     Value: !Ref SecurityGroupALB
     Export:
-      Name: SecurityLayer-SecurityGroupALB
+      Name: SecurityGroupALBId-SecurityLayer
