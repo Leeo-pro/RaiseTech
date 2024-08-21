@@ -64,9 +64,9 @@ Resources:
     Type: AWS::EC2::Instance
     Properties:
       NetworkInterfaces:
-        - SubnetId: !ImportValue NetworkLayer-PublicSubnet1a
+        - SubnetId: !ImportValue PublicSubnet1aId-NetworkLayer
           GroupSet:
-            - !ImportValue SecurityLayer-SecurityGroupEC2
+            - !ImportValue SecurityGroupEC2Id-SecurityLayer
           DeviceIndex: 0
       InstanceType: !Ref InstanceType
       ImageId: ami-0af1df87db7b650f4
@@ -95,7 +95,7 @@ Resources:
       DBSubnetGroupName: !Ref SampleRDSSubnetgroup
       MultiAZ: false
       VPCSecurityGroups:
-        - !ImportValue SecurityLayer-SecurityGroupRDS
+        - !ImportValue SecurityGroupRDSId-SecurityLayer
       StorageEncrypted: true
       KmsKeyId: !Ref MyKMSKey
       DeleteAutomatedBackups: true
@@ -106,8 +106,8 @@ Resources:
       DBSubnetGroupDescription: !Ref DBSubnetGroupDescription
       DBSubnetGroupName: SampleRDSSubnetgroup
       SubnetIds:
-        - !ImportValue NetworkLayer-PrivateSubnet1a
-        - !ImportValue NetworkLayer-PrivateSubnet1c
+        - !ImportValue PrivateSubnet1aId-NetworkLayer
+        - !ImportValue PrivateSubnet1cId-NetworkLayer
 
   SampleALB:
     Type: AWS::ElasticLoadBalancingV2::LoadBalancer
@@ -116,10 +116,10 @@ Resources:
       Name: SampleALB
       Scheme: internet-facing
       SecurityGroups:
-        - !ImportValue SecurityLayer-SecurityGroupALB
+        - !ImportValue SecurityGroupALBId-SecurityLayer
       Subnets:
-        - !ImportValue NetworkLayer-PublicSubnet1a
-        - !ImportValue NetworkLayer-PublicSubnet1c
+        - !ImportValue PublicSubnet1aId-NetworkLayer
+        - !ImportValue PublicSubnet1cId-NetworkLayer
       Tags:
         - Key: Name
           Value: SampleALB
@@ -135,7 +135,7 @@ Resources:
         - Id:
             Ref: SampleEC21a
           Port: 80
-      VpcId: !ImportValue NetworkLayer-SampleVPC
+      VpcId: !ImportValue SampleVPCId-NetworkLayer
       # ヘルスチェックを有効化
       HealthCheckEnabled: true
       # ヘルスチェックプロトコル（ターゲットでヘルスチェックを実行するときにロードバランサーが使用するプロトコル）

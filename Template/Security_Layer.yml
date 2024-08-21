@@ -1,6 +1,12 @@
 AWSTemplateFormatVersion: 2010-09-09
 Description: Security_Layer Template
 
+Parameters:
+  MyCidrIp:
+    NoEcho: true
+    Type: String
+    Description: Enter the CIDR IP for the security group ingress rule
+
 Resources:
   SecurityGroupEC2:
     Type: AWS::EC2::SecurityGroup
@@ -15,11 +21,11 @@ Resources:
         - IpProtocol: tcp
           FromPort: 22
           ToPort: 22
-          CidrIp: 10.0.0.0/24
+          CidrIp: !Ref MyCidrIp
       Tags:
         - Key: Name
           Value: SecurityGroupEC2
-      VpcId: !ImportValue NetworkLayer-SampleVPC
+      VpcId: !ImportValue SampleVPCId-NetworkLayer
 
   SecurityGroupRDS:
     Type: AWS::EC2::SecurityGroup
@@ -34,7 +40,7 @@ Resources:
       Tags:
         - Key: Name
           Value: SecurityGroupRDS
-      VpcId: !ImportValue NetworkLayer-SampleVPC
+      VpcId: !ImportValue SampleVPCId-NetworkLayer
 
   SecurityGroupALB:
     Type: AWS::EC2::SecurityGroup
@@ -49,7 +55,7 @@ Resources:
       Tags:
         - Key: Name
           Value: SecurityGroupALB
-      VpcId: !ImportValue NetworkLayer-SampleVPC
+      VpcId: !ImportValue SampleVPCId-NetworkLayer
 
 Outputs:
   SecurityGroupEC2:
