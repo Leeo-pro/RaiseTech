@@ -14,12 +14,7 @@ $ gem install serverspec<br><br>
 * 初期設定<br>
 $ serverspec-init
 対話形式で設定。設定後、以下の通りファイルが作成<br>
-  ├─ spec<br>
-  │  ├─ localhost<br>
-  │  │  └─ sample_spec.rb<br>
-  │  └─ spec_helper.rb<br>
-  ├─ Rakefile<br>
-  └─ .rspec<br><br>
+* [ツリー構造](serverspec/tree.png)<br><br>
 
 * テストコードの作成<br>
 * [specファイル](serverspec/lecture11_spec.rb)<br><br>
