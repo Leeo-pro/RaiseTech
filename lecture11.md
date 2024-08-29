@@ -6,25 +6,25 @@
 * [公式 doc](https://serverspec.org/)
 
 ## 流れ
-* serverspecのインストール
-$ gem install serverspec
+* serverspecのインストール<br>
+$ gem install serverspec<br><br>
 
-* 作業ディレクトリへ移動
+* 作業ディレクトリへ移動<br><br>
 
-* 初期設定
+* 初期設定<br>
 $ serverspec-init
-対話形式で設定。設定後、以下の通りファイルが作成
-  ├─ spec
-  │  ├─ localhost
-  │  │  └─ sample_spec.rb
-  │  └─ spec_helper.rb
-  ├─ Rakefile
-  └─ .rspec
+対話形式で設定。設定後、以下の通りファイルが作成<br>
+  ├─ spec<br>
+  │  ├─ localhost<br>
+  │  │  └─ sample_spec.rb<br>
+  │  └─ spec_helper.rb<br>
+  ├─ Rakefile<br>
+  └─ .rspec<br><br>
 
-* テストコードの作成
-* [specファイル](serverspec/lecture11_spec.rb)
+* テストコードの作成<br>
+* [specファイル](serverspec/lecture11_spec.rb)<br><br>
 
-* テストコードの実行
-$ rspec spec/localhost/sample_spec.rb
+* テストコードの実行<br>
+$ rspec spec/localhost/sample_spec.rb<br>
 * [実行結果](serverspec/test_success.png)
 
