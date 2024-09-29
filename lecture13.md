@@ -20,7 +20,7 @@
 ![処理結果](images/lecture13/Serverspec.png)<br><br>
 
 ## CircleCI結果（参考）<br>
-![全体の処理結果](images/lecture13/Serverspec.png)<br><br>
+![全体の処理結果](images/lecture13/CircleCI.png)<br><br>
 
 ## ALBのDNS名経由でアプリが正常に動作していることの確認<br>
 ![動作確認](images/lecture13/APP_CHECK.png)<br><br>
